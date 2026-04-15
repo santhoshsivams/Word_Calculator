@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Calculator</title>
+</head>
+<body>
+    <h1>Word Calculator</h1>
+    <textarea name="" id="para" rows="5" cols="40"></textarea>
+    <button onclick="countWords">Calulate</button>
+    <h3 id="result"></h3>
+
+    <script>
+        function countWords(){
+        let text = document.getElementById("para").value;
+        let word = text.trim().split(/\s+/);
+        let count = 0;
+
+        if(text.trim === ""){
+            count = 0;
+        }
+        else{
+            count = word.length
+        }
+        document.getElementById("result").innerHTML= "Total Words: "+ count
+
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

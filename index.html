@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+    <h2>Word Calculator</h2>
+    
+    <div id="texbox">
+        <textarea name="" rows="6" cols="40" id="paragraph" placeholder="Enter Your paragraph"></textarea>
+    </div>
+    <br>
+    <button onclick="countWords()">Calculate Words</button>
+    
+    
+    <br>
+    <div id="resultbox">
+        <h3 id="result">Result</h3>
+    </div>
+</div>
+
+    
+
+    <script>
+        function countWords(){
+
+            let text = document.getElementById("paragraph").value;
+            let words = text.trim().split(/\s+/);
+            let count =0;
+
+            if (text.trim()=== "")
+            {
+                count = 0;
+            }
+             else
+            {
+                count = words.length;
+
+            }
+             document.getElementById("result").innerHTML = "Total Words: " + count;
+
+
+        }
+        let text = document.getElementById("paragraph").value;
+        
+         console.log(text)
+        
+    </script>
+    
+</body>
+</html>
